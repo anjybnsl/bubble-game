@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "pp";
+    src: url(./playpen.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "pp";
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(164, 218, 229);
+}
+
+.panel{
+    height: 80%;
+    width: 80%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ptop{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30%;
+    height: 65px;
+    width: 100%;
+    background-color: rgb(3, 38, 52);
+}
+
+.elem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.box{
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: black;
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+.pbtm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* flex-wrap: wrap; with this we are enabling the wrap function which is allowing the content to go to the next line */
+    width: 100%;
+    height: calc(100% - 65px);
+    /* here with calc() we are subtracting the 65px which was given to ptop from the desired height of pbtm. */
+    padding: 10px 10px;
+    color: rgb(76, 117, 206);
+    /* this is the color for the "Game Over" h2 tag written in js runTimer() */
+}
+
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: #49a6e4;
+    border-radius: 50%;
+    color: rgb(16, 15, 15);
+    font-weight: 500;
+}
+
+.bubble:hover{
+    cursor: pointer;
+    background-color: #49a293;
+}
+
+
+/* Media query for small screens */
+@media (max-width: 500px) {
+    .panel {
+        width: 90%;
+        height: 90%;
+    }
+
+    .ptop {
+        padding: 0 10%;
+        height: 50px;
+    }
+
+    .box {
+        font-size: 4.5vw;
+        padding: 3px 6px;
+    }
+
+    .bubble {
+        height: 40px;
+        width: 40px;
+        font-size: 4vw;
+    }
+}
