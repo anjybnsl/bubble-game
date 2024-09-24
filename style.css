@@ -93,7 +93,7 @@ html,body{
 
 
 /* Media query for small screens */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .panel {
         width: 90%;
         height: 90%;
